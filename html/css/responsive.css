@@ -1,0 +1,73 @@
+@media screen and (max-width: 1466px) {
+  h2 {
+    font-size: 40px;
+  }
+  .container {
+    max-width: 1150px;
+  }
+  .main_nav .nav_list ul {
+    gap: 30px;
+    justify-content: end;
+  }
+  .main_banner .banner_container {
+    width: 1140px;
+  }
+  .main_banner .banner_img_wapper figure {
+    width: 100%;
+    height: 700px;
+    background-size: 100% 100%;
+    transform: none;
+  }
+  .main_banner .prev-btn, .main_banner .next-btn {
+    bottom: 155px;
+  }
+  .wellcome_img_wapper_bottom .fig_holder {
+    width: 502px;
+  }
+  .wellcome_text_wapper_bottom ul li {
+    font-size: 15px;
+    flex: 0 0 46%;
+  }
+  .services_offer_img .fig_holder {
+    width: 235px;
+  }
+  .services_offer_img h3 a {
+    font-size: 18px;
+  }
+  .services_offer_img .text {
+    height: 250px;
+  }
+  .advice_section h3 a {
+    font-size: 18px;
+  }
+  .Cases_img_slider .fig_holder {
+    width: 322px;
+  }
+  .main_footer .first_text h2 {
+    font-size: 24px;
+  }
+  .main_footer .social_media h3 {
+    font-size: 18px;
+  }
+  .main_footer .social_media ul span {
+    font-size: 12px;
+  }
+  .main_footer .row:first-child .col-md-6::after {
+    height: 83px;
+  }
+  .bottom_part_footer .copyright p {
+    font-size: 12px;
+  }
+  .options_section_footer .contact_info ul {
+    gap: 5px;
+  }
+  .options_section_footer .contact_info ul li {
+    font-size: 12px;
+  }
+  .options_section_footer .contact_info a {
+    font-size: 12px;
+  }
+  .inner_banner_main h2 {
+    font-size: 50px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

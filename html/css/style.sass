@@ -1,0 +1,2203 @@
+@import slick
+
+=filter($filter_mode)
+    -webkit-filter: $filter_mode
+    -moz-filter: $filter_mode
+    -ms-filter: $filter_mode
+    -o-filter: $filter_mode
+    filter: $filter_mode
+
+=back-drop-filter($blur)
+    -webkit-backdrop-filter: $blur
+    -moz-backdrop-filter: $blur
+    -ms-backdrop-filter: $blur
+    -o-backdrop-filter: $blur
+    backdrop-filter: $blur
+
+=text-stroke-width($tstrokewidth)
+    -webkit-text-stroke-width: $tstrokewidth
+    -moz-text-stroke-width: $tstrokewidth
+    -ms-text-stroke-width: $tstrokewidth
+    -o-text-stroke-width: $tstrokewidth
+
+=text-stroke-color($tstrokecolor)
+    -webkit-text-stroke-color: $tstrokecolor
+    -moz-text-stroke-color: $tstrokecolor
+    -ms-text-stroke-color: $tstrokecolor 
+    -o-text-stroke-color: $tstrokecolor	
+
+=box-sizing($box)
+    -webkit-box-sizing: $box
+    -moz-box-sizing: $box
+    -ms-box-sizing: $box
+    -o-box-sizing: $box
+    webkit-box-sizing: $box
+
+=border-radius($round)
+    -webkit-border-radius: $round
+    -moz-border-radius: $round
+    -ms-border-radius: $round
+    border-radius: $round
+
+=transform($trans)
+    -webkit-transform: $trans
+    -moz-transform: $trans
+    -ms-transform: $trans
+    transform: $trans
+
+=transition($smooth)
+    -webkit-transition: $smooth
+    -moz-transition: $smooth
+    -o-transition: $smooth
+    transition: $smooth
+
+=appearance($appr)
+    -webkit-appearance: $appr
+    -moz-appearance: $appr
+    -o-appearance: $appr
+    appearance: $appr
+
+=box-shadow($bbs)
+    -webkit-box-shadow: $bbs
+    -moz-box-shadow: $bbs
+    -o-box-shadow: $bbs
+    box-shadow: $bbs
+
+=text-shadow($tbbs)
+    -webkit-text-shadow: $tbbs
+    -moz-text-shadow: $tbbs
+    -o-text-shadow: $tbbs
+    text-shadow: $tbbs
+
+
+$white: #ffff
+$black: #131313
+$black-shade: #2D2D2D
+$black-main: #000000
+$red-light: #E9422D
+$red: #C00009
+$red-shade: #CB0101
+$red-dark: #960007
+$color-paragraph: #858585
+$white-shade: #ABABAB
+$border-color: #676767
+$bg-extra: #B8B8B8
+$border-dash: #F6F6F6
+$blue: #0072EC
+$blue-light: #3097D8
+$blue-dark: #1C3742
+$blue-light-shade: #01BAFD
+$icon-twitter: #00acee
+$green-deep: #738E00
+$brown: #8F3C07
+$green-light: #B9FCB9
+$green-deep: #388838
+$green_main: #66C666
+$green_light_extra: #ADEEAD
+$yellow: #A69054
+$yellow-light: #E1C54C
+$testi-bg: #EDEDED
+$pink-dark: #9D4949
+$pink: #CD7575
+$pink-shade: #DC8686
+$pink-light: #F9C5C5
+$pink-light-shade: #F8DFDF
+$pink-shade-dark: #F19B9B 
+$perpel: #3F0167
+$perpel-dark: #2E004D
+$grey: #D7D7D7
+$grey-dark: #939393
+
+$font_paragraph: "Lexend"
+$font_heading: "Nunito"
+
+*   
+    +box-sizing(border-box)
+
+html
+    -webkit-text-size-adjust: 100%
+
+div, h1, h2, h3, h4, h5, p, ol, form, input, textarea, img, html, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    vertical-align: baseline
+
+body
+    margin: 0
+    padding: 0
+    font-family: $font_heading
+    scroll-behavior: smooth
+	
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+img
+    max-width: 100%
+    height: auto
+    border: none
+    outline: none
+    display: block
+
+blockquote, q
+    quotes: none
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    li
+        padding: 0
+        margin: 0
+
+h1
+    font-size: 35px
+
+h2
+    font-weight: 800
+    font-size: 44px
+    line-height: 1
+    color: $green_main
+    margin-bottom: 20px
+    span
+        color: $red
+    strong
+        color: $red
+        font-weight: 700
+h3
+    font-weight: 300
+    font-size: 24px
+    line-height: 36px
+    color: $black
+    font-family: $font_paragraph
+
+h1, h2
+    font-family: $font_heading
+
+h6
+    font-size: 24px
+    font-weight: 600
+    font-family: $font_paragraph
+    line-height: 1
+    color: $black-shade
+
+p
+    font-family: $font_heading
+    font-weight: 600
+    font-size: 15px
+    line-height: 24px
+    color: $border-color
+
+figure
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    position: relative
+    border-radius: 12px
+
+a
+    font-family: $font_heading
+    color: $green-deep
+    text-decoration: none
+    +transition(0.3s)
+    &:hover
+        color: $black
+
+.a_btn
+    font-family: $font_heading
+    background-color: $green_main
+    color: $white
+    border: 1px solid $green_main
+    display: inline-block
+    padding: 20px
+    font-weight: 700
+    font-size: 15px
+    line-height: 19px
+    margin-top: 40px
+    +transition(0.3s)
+    text-align: center
+    position: relative
+    overflow: hidden
+    +transition(0.3s)
+    border-radius: 48px
+    &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: $white
+        +transform(translateX(-90%))
+        +transition(0.8s)
+        opacity: 0
+        visibility: hidden
+    &:hover
+        border-color: $green-deep
+        background-color: $green-deep
+        color: $white
+        &::after
+            +transform(translateX(100%))
+            visibility: visible
+            opacity: 1
+    &.appointment_icon
+        padding-left: 55px
+        &::before
+            content: ""
+            position: absolute
+            width: 24px
+            height: 24px
+            background-image: url(../img/icon-appointment.png)
+            left: 20px
+            top: 15px
+    &.view_icon
+        padding-left: 55px
+        &::before
+            content: ""
+            position: absolute
+            width: 24px
+            height: 15px
+            background-image: url(../img/icon-view-all.png)
+            left: 20px
+            top: 20px
+            background-repeat: no-repeat
+            background-size: 100%
+
+ul
+    font-family: $font_heading
+    color: $border-color
+    font-size: 15px
+    font-weight: 600
+    strong
+        color: $black-shade
+        font-family: $font_paragraph
+        font-size: 18px
+        font-weight: 600
+.span-text
+    color: $border-color
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 800
+    font-size: 20px
+    margin-bottom: 10px
+    line-height: 1
+
+.container
+    max-width: 1440px
+    width: 100%
+    
+// main
+.main_header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    +transition(0.3s)
+    .top
+        background-color: rgba(255, 255, 255, 0.30)
+        padding: 15px 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .contact_info
+        ul
+            display: flex
+            align-items: center
+            gap: 10px
+            font-size: 15px
+            font-weight: 400
+            color: $green-deep
+            li
+                display: flex
+                align-items: center
+                gap: 10px
+            span
+                background-color: $green-light
+                width: 40px
+                height: 40px
+                display: inline-block
+                position: relative
+                border-radius: 100%
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    +transform(translate(-50% , -50%))
+        a
+            color: $green-deep
+            font-weight: 400
+            &:hover
+                color: $black
+    .sing_inUp
+        ul
+            display: flex
+            align-items: center
+            gap: 10px
+            a
+                color: $green-deep
+                font-size: 15px
+                font-weight: 700
+                background-color: transparent
+                &:hover
+                    color: $black
+            li
+                &.active
+                    a
+                        background-color: $green-deep
+                        padding: 10px 15px
+                        border-radius: 24px
+                        color: $white
+    &.fixed
+        .main_nav
+            padding: 5px 0
+            width: 100%
+            background-color: $white
+            position: fixed
+            top: 0
+            margin-top: 0
+            border-bottom: 1px solid $border-dash
+            box-shadow: 0px 0px 15px rgba(73, 73, 73, 0.12)
+// 
+.home_tab_menu
+    display: none
+.main_nav
+    margin-top: 15px
+    +transition(0.3s)
+    .row
+        align-items: center
+    .nav_wapper
+        float: right
+        display: flex
+        align-items: center
+        gap: 95px
+    .nav_list
+        ul
+            display: flex
+            align-items: center
+            gap: 50px
+            li
+                &.active
+                    a
+                        color: $green_main
+        a
+            color: $black-shade
+            font-size: 15px
+            font-weight: 700
+            &:hover
+                color: $green-deep
+.search_form
+    width: 280px
+    position: relative
+    height: 50px
+    .click_to_open
+        position: absolute
+        right: 20px
+        top: 5px
+        cursor: pointer
+    .search-container
+        position: absolute
+        width: 100%
+        top: 0  
+        left: 0
+        .form_box
+            display: none
+            input
+                &:not(.search-button)
+                    opacity: 0 
+                    +transition(0.7s)
+                    background-color: rgba(102, 198, 102, 1)
+                    width: 100%
+                    height: 50px
+                    border-radius: 48px
+                    padding: 0 20px
+                    padding-right: 42px
+                    outline: 0
+                    color: $white
+                &::placeholder
+                    font-size: 14px
+                    font-weight: 700
+                    color: $white
+                &.active
+                    +transform(none)
+                    opacity: 1 
+            .search-button
+                width: 40px
+                height: 40px
+                background: none
+                background-image: url(../img/Icon-Search.png)
+                background-repeat: no-repeat
+                background-position: center
+                border: 0
+                outline: none
+                font-size: 0
+                position: absolute
+                top: 5px
+                right: 20px
+// 
+.main_banner
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 900px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $green-light
+        opacity: 60%
+    .banner_container
+        position: absolute
+        width: 1440px
+        top: 50%
+        left: 0
+        right: 0
+        margin: auto
+        +transform(translateY(-50%))
+        z-index: 1
+    h6
+        color: $black-shade
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 0
+    h1
+        color: $green-deep
+        font-size: 64px
+        font-weight: 800
+        line-height: 87px
+    p
+        width: 90%
+    .banner-text_wapper
+        width: 68%
+        display: inline-block
+        top: 50%
+        position: absolute
+        +transform(translateY(-50%))
+    .main_content_wapper
+        position: relative
+        &::after
+            content: ""
+            display: block
+            clear: both
+    .banner_img_wapper
+        width: 34%
+        display: inline-block
+        float: right
+        figure
+            width: 100%
+            height: 830px
+            background-size: 101% 90%
+            background-repeat: no-repeat
+            // +transform(translate(0%, 13%))
+        // .slick_hight
+        //     width: 100%
+        //     height: 899px
+        //     position: relative
+    .button_wapper
+        margin-top: 60px
+        ul
+            display: flex
+            align-items: center
+            gap: 10px
+            li
+                position: relative
+                &:last-child
+                    .icon-holder
+                        left: inherit
+                        right: 20px
+                    .a_btn
+                        padding-left: 20px
+                        padding-right: 55px
+        .icon-holder
+            position: absolute
+            width: 24px
+            height: 24px
+            display: inline-block
+            left: 20px
+            top: 18px
+            z-index: 1     
+    .a_btn
+        position: relative
+        padding-left: 55px
+        margin-top: 0
+    &::before
+        content: ""
+        position: absolute
+        top: 120px
+        left: 0
+        background-image: url(../img/shape.png)
+        width: 288px
+        height: 745px
+        background-size: contain
+        background-repeat: no-repeat
+    .next-btn
+        font-size: 0
+        background-color: transparent
+        border: 0
+        position: absolute
+        z-index: 2
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        bottom: 226px
+        left: 50%
+        +transform(translateX(-50%))
+        +transition(0.3s)
+        &:hover
+            background-image: url(../img/icon-next.png)
+    .prev-btn
+        font-size: 0
+        background-color: transparent
+        border: 0
+        position: absolute
+        z-index: 2
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        bottom: 226px
+        left: 45%
+        +transform(translateX(-50%) rotate(180deg))
+        +transition(0.3s)
+        &:hover
+            background-image: url(../img/icon-next.png)
+// 
+.welcome_safehelp
+    margin-top: -100px
+    position: relative
+    z-index: 2
+    margin-bottom: 60px
+    .bottom_part
+        margin-top: 60px
+.welcome_img_wapper
+    position: relative
+    +transition(0.3s)
+    .text
+        position: absolute
+        bottom: 15px
+        background-color: $black-shade
+        padding: 17px 20px  
+        border-radius: 48px
+        left: 50%
+        +transform(translateX(-50%))
+        width: 95%
+        +transition(0.5s)
+        overflow: hidden
+        height: 26%
+    .fig_holder
+        width: 100%
+        height: 300px
+        figure
+            border-radius: 12px
+            +filter(grayscale(1))
+    h3
+        color: $white
+        font-size: 24px
+        font-weight: 600
+        font-family: $font_paragraph
+        line-height: 1
+        span
+            display: block
+            font-size: 15px
+            font-weight: 700
+            margin-top: 5px
+            font-family: $font_heading
+    .icon_holder
+        position: absolute
+        width: 48px
+        height: 48px
+        display: inline-block
+        right: 20px
+        top: 14px
+        +transition(0.3s)
+        &:hover
+            +filter(brightness(0) saturate(100%) invert(68%) sepia(81%) saturate(282%) hue-rotate(70deg) brightness(86%) contrast(92%))
+    p
+        color: $white
+        margin-top: 20px
+    &:hover
+        .text
+            background-color: rgba(45, 45, 45, 0.60)
+            +back-drop-filter(blur(3px))
+            height: 90%
+            border-radius: 12px
+        .icon_holder
+            top: auto
+            bottom: 20px
+        .paragraph
+            +transform(none)
+        figure
+            +filter(none)
+    .paragraph
+        +transform(translateY(115%))
+.wellcome_img_wapper_bottom
+    position: relative
+    &::after
+        content: ""
+        display: block
+        clear: both
+    .fig_holder
+        width: 584px
+        height: 400px
+        figure
+            border-radius: 12px
+        &:last-child
+            width: 460px
+            height: 300px
+            float: right
+            margin-top: -135px
+            margin-right: 30px
+            position: relative
+            figure
+                position: relative
+                z-index: 2
+            &::after
+                content: ""
+                position: absolute
+                top: -30px
+                right: -30px 
+                width: 100%
+                height: 100%
+                background-color: $white
+                border-radius: 12px
+                z-index: 1
+    .video_iocn
+        background-color: $green-deep
+        width: 80px
+        height: 80px
+        border-radius: 100%
+        display: inline-block
+        background-image: url(../img/video_icon.png)
+        background-repeat: no-repeat
+        background-position: center
+        border: 10px solid $green_main
+        position: absolute
+        bottom: 100px
+        right: 0
+        z-index: 2
+        +transition(0.3s)
+        &:hover
+            border-color: $green-deep
+.wellcome_text_wapper_bottom
+    ul
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 20px
+        li
+            position: relative
+            font-size: 18px
+            font-weight: 600
+            font-family: $font_paragraph
+            color: $black-shade
+            padding-left: 28px
+            flex: 0 0 33%
+            margin-bottom: 20px
+            &::after
+                content: ""
+                position: absolute
+                width: 18px
+                height: 14px
+                background-image: url(../img/icon-right.png)
+                background-repeat: no-repeat
+                left: 0
+                top: 7px
+    .a_btn
+        padding-left: 55px
+        float: right
+        span
+            position: absolute
+            left: 20px
+            top: 17px
+// 
+.services_offer_mian
+.services_offer
+    background-color: $green-light
+    padding: 60px 0
+    min-height: 400px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url(../img/services_over.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: right center
+    .text
+        position: relative
+        z-index: 1
+    h2
+        color: $green-deep
+    .row
+        align-items: center
+.services_bottom_part
+    margin-top: -150px
+    z-index: 1
+    position: relative
+    margin-bottom: 60px
+    .elements
+        position: relative
+        padding-right: 30px
+    // .slick-list
+    //     overflow: visible
+    .service_img_slider
+        position: relative
+    .slick-next
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        position: absolute
+        bottom: 0
+        left: 52%
+        +transform(translateX(-50%))
+        +transition(0.3s)
+        font-size: 0
+        border: 0
+        background-color: transparent
+        &:hover
+            background-image: url(../img/icon-next.png)
+    .slick-prev
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        position: absolute
+        bottom: 0
+        left: 46%
+        +transform(translateX(-50%) rotate(180deg))
+        +transition(0.3s)
+        font-size: 0
+        border: 0
+        background-color: transparent
+        z-index: 2
+        &:hover
+            background-image: url(../img/icon-next.png)
+.services_offer_img
+    position: relative
+    text-align: center
+    .fig_holder
+        width: 95%
+        height: 200px
+        position: absolute
+        top: -82px
+        +transition(0.3s)
+        figure
+            border-radius: 12px 12px 12px 0px
+            +filter(grayscale(1))
+            +transition(0.3s)
+    .text
+        padding-top: 130px
+        background-color: $border-dash
+        border-radius: 12px 12px 0px 0px
+        padding-bottom: 20px
+        padding-left: 20px
+        padding-right: 20px
+        border: 2px solid transparent
+        +transition(0.3s)
+        height: 238px
+        overflow: hidden
+    h3
+        a
+            font-size: 24px
+            font-weight: 600
+            color: $black-shade
+            font-family: $font_paragraph
+            &:hover
+                color: $green-deep
+    .a_btn
+        display: block
+        margin-top: 0
+        border-radius: 0px 0px 12px 12px
+        text-align: left
+        padding: 18px
+        padding-left: 54px
+        position: relative
+        border-top: 1px solid $green-deep
+        background-color: $green-light
+        color: $green-deep
+        span
+            position: absolute
+            width: 24px
+            height: 24px
+            display: inline-block
+            left: 20px
+            top: 15px
+            img
+                +transition(0.3s)
+        &::after
+            background-color: $white
+        &:hover
+            background-color: $green-deep
+            color: $white
+            img
+                +filter(brightness(100))
+    &:hover
+        .text
+            border-color: $green-deep
+        .fig_holder
+            width: 100%
+        figure
+            +filter(none)
+            border-radius: 12px 12px 0 0 
+.service_img_slider
+    .slider_height
+        height: 470px
+        position: relative
+        .services_offer_img
+            position: absolute
+            left: 0
+            top: 50%
+            +transform(translateY(-50%))
+// 
+.advice_main
+    margin: 60px 0
+.advice_section
+    position: relative
+    margin-top: 120px
+    .icon_part
+        background-color: $black-shade
+        width: 96%
+        height: 200px
+        border-radius: 12px 12px 12px 0px
+        position: absolute
+        top: -90px
+        left: 0
+        +transition(0.3s)
+        .icon_holder
+            background-color: $black
+            width: 120px
+            height: 120px
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            +transform(translate(-50% , -50%))
+            border-radius: 100%
+            +transition(0.3s)
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            +transform(translate(-50% , -50%))
+            +transition(0.3s)
+    .text
+        background-color: $border-dash
+        padding-top: 130px
+        border-radius: 12px
+        padding-left: 20px
+        padding-bottom: 20px
+        padding-right: 20px
+        border: 2px solid transparent
+        +transition(0.3s)
+    h3
+        a
+            color: $black
+            font-size: 24px
+            font-weight: 600
+            font-family: $font_paragraph
+            &:hover
+                color: $green-deep
+    &:hover
+        .text
+            border-color: $green-deep
+        .icon_part
+            background-color: $green-deep
+            width: 100%
+            border-radius: 12px 12px 0 0 
+            img
+                +filter(brightness(100))
+        .icon_holder
+            background-color: $green_main
+// 
+.case
+    .services_offer
+        background-image: url(../img/case_base.png)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: left center
+        &::after
+            display: none
+    .services_offer_img
+        text-align: left
+.Cases_img_slider
+    .slider_height
+        height: 670px
+        position: relative
+        .services_offer_img
+            position: absolute
+            left: 0
+            top: 50%
+            +transform(translateY(-50%))
+    .services_offer_img
+        .text
+            height: auto
+            padding-top: 175px
+            min-height: 430px
+    ul
+        text-align: left
+        margin-top: 20px
+        li
+            display: flex
+            align-items: center
+            gap: 50px
+            margin-bottom: 10px
+            color: $border-color
+            font-size: 15px
+            font-weight: 600
+            font-family: $font_heading
+            &:last-child
+                margin-bottom: 0
+        span
+            font-size: 18px
+            font-weight: 600
+            font-family: $font_paragraph
+            color: $black-shade
+            display: block
+            min-width: 90px
+    .fig_holder
+        width: 96%
+        height: 240px
+// 
+.get_started_main
+    margin: 60px 0
+    .accordion-item
+        border: 0
+        &.active
+            .accordion-contant
+                display: block
+                background-color: $green-deep
+                margin-bottom: -46px
+            .bottom_base
+                background-color: $green-deep
+                &::after
+                    +transform(rotate(180deg))
+                    +filter(brightness(0) saturate(100%) invert(73%) sepia(4%) saturate(4154%) hue-rotate(71deg) brightness(88%) contrast(113%))
+            .accordion-titel
+                // margin-top: 
+    .accordion
+        margin-top: 30px
+        position: relative
+        .accordion-item
+            &:first-child
+                .accordion-titel
+                    margin-top: 30px
+        h3
+            font-size: 18px
+            font-weight: 600
+            font-family: $font_paragraph
+            color: $white
+            background-color: $black-shade
+            border-radius: 12px 12px 12px 0px
+            padding: 20px
+            z-index: 2
+            position: relative
+            width: 97%
+            p
+                color: $white
+    .bottom_base
+        display: block
+        background-color: $border-dash
+        position: absolute
+        width: 100%
+        height: 86px
+        border-radius: 12px
+        bottom: -53px
+        +transition(0.3s)
+        &::after
+            content: ""
+            position: absolute
+            width: 24px
+            height: 24px
+            background-image: url(../img/icon-down-arrow.png)
+            background-repeat: no-repeat
+            right: 43px
+            bottom: 16px
+            z-index: 3
+            +transition(0.3s)
+    .accordion-titel
+        position: relative
+        margin-top: 73px
+    .accordion-contant
+        position: relative
+        z-index: 2
+        margin-top: 20px
+        display: none
+        padding-bottom: 6px
+        border-radius: 12px
+        ul
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 15px
+            margin: 0 20px
+            margin-bottom: 20px
+            width: 93%
+            li
+                background-color: $green_main
+                padding: 16px 10px 
+                padding-right: 38px
+                border-radius: 28px
+                position: relative
+                +transition(0.3s)
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 18px
+                    height: 18px
+                    background-image: url(../img/icon-arrow.png)
+                    right: 10px
+                    top: 19px
+                    background-size: 100%
+                &:hover
+                    background-color: $black
+        a
+            font-size: 15px
+            font-weight: 600
+            font-family: $font_paragraph
+            color: $white
+    .a_btn
+        padding-left: 54px
+        margin-top: 85px
+        span
+            width: 24px
+            height: 15px
+            display: inline-block
+            position: absolute
+            top: 21px
+            left: 20px
+    &.inner
+        margin-bottom: 120px
+// 
+.why_choose_us
+    margin-top: unset
+    .wellcome_text_wapper_bottom 
+        ul
+            display: block
+            font-family: $font_paragraph
+            p
+                margin-top: 5px
+    .yers_exprience
+        position: absolute
+        bottom: 100px
+        right: 0
+        z-index: 2
+        background-color: $green-deep
+        border-radius: 12px
+        padding: 10px
+        .wapper
+            padding: 10px   
+            background-color: $green_main
+            border-radius: 12px
+        span
+            display: block
+            font-family: $font_heading
+            color: $white
+            line-height: 1
+            font-size: 15px
+            font-weight: 900
+            &:first-child
+                font-size: 38px
+                font-weight: 700
+                font-family: $font_paragraph
+                margin-bottom: 8px
+    .wellcome_img_wapper_bottom 
+        .fig_holder
+            &:last-child
+                &::after
+                    background-color: $white
+// 
+.testimonials_main
+    margin: 60px 0
+    .profile_holder
+        width: 215px
+        height: 300px
+        flex-shrink: 0
+        figure
+            border-radius: 12px
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                width: 73px
+                height: 100px
+                background-image: url(../img/quotes.png)
+                background-repeat: no-repeat
+                left: 50%
+                top: 50%
+                +transform(translate(-50% , -50%))
+                background-size: 100%
+    .testi_slider_wapper
+        display: flex
+        align-items: center
+        gap: 30px
+    .text
+        h6
+            font-size: 18px
+        span
+            font-size: 15px
+            font-weight: 600
+            font-family: $font_paragraph
+            display: block
+            margin: 10px 0
+            color: $color-paragraph
+    .testi_slider
+        position: relative
+        padding-bottom: 80px
+    .slick-next
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        position: absolute
+        bottom: 0
+        left: 55%
+        +transform(translateX(-50%))
+        +transition(0.3s)
+        font-size: 0
+        border: 0
+        background-color: transparent
+        &:hover
+            background-image: url(../img/icon-next.png)
+    .slick-prev
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-back.png)
+        position: absolute
+        bottom: 0
+        left: 46%
+        +transform(translateX(-50%) rotate(180deg))
+        +transition(0.3s)
+        font-size: 0
+        border: 0
+        background-color: transparent
+        z-index: 2
+        &:hover
+            background-image: url(../img/icon-next.png)
+// 
+.contact_offer_mian
+    margin: 60px 0
+    .contact_top
+        background-color: $green-light
+        background-image: url(../img/face.png)
+        background-position: right center
+        min-height: 460px
+        background-repeat: no-repeat
+        padding-top: 60px
+    h2
+        color: $green-deep
+.contact_bottom_part
+    margin-top: -130px
+    .wapper
+        position: relative
+    .fig_holder
+        position: absolute
+        width: 97%
+        height: 240px
+        z-index: 2
+        top: -115px
+        figure
+            border-radius: 12px 12px 12px 0px
+    .contact_from_main_indedx
+        background-color: $border-dash
+        border-radius: 12px 12px 0px 0px
+        z-index: 1
+        padding-top: 145px
+    h3
+        font-size: 24px
+        font-weight: 600
+        font-family: $font_paragraph
+    .form_wapper
+        padding: 30px
+        position: relative
+        .col-md-12
+            .form_group
+                margin-bottom: 0
+        input , select
+            &:not(.a_btn , input[type=checkbox] , input[type=radio])
+                width: 100%
+                height: 60px
+                background-color: $border-dash
+                border-radius: 48px
+                outline: 0
+                padding: 0 20px
+                border: 1px solid $bg-extra
+                -webkit-appearance: none
+                +transition(0.3s)
+                font-weight: 600
+                &:focus
+                    border-color: $green-deep
+                    color: $green-deep
+                    background-color: $green-light
+                    &::placeholder
+                        color: $green-deep
+            &::placeholder
+                font-size: 15px
+                font-weight: 700
+                color: $bg-extra
+                +transition(0.3s)
+        .form_group
+            margin-bottom: 15px
+            position: relative
+        select
+            color: $bg-extra
+            position: relative
+            &:focus
+                .drop_down_arow
+                    +transform(rotate(180deg))
+        .drop_down_arow
+            position: absolute
+            width: 18px
+            height: 18px
+            background-image: url(../img/icon-down-arrow-grey.png)
+            right: 20px
+            top: 21px
+            z-index: 1
+        .date_icon
+            position: absolute
+            width: 18px
+            height: 17px
+            background-image: url(../img/icon-calendar.png)
+            background-repeat: no-repeat
+            right: 20px
+            top: 20px
+        textarea
+            width: 100%
+            height: 120px
+            resize: none
+            background-color: $border-dash
+            border-radius: 12px
+            outline: 0
+            padding: 20px
+            border: 1px solid $bg-extra
+            -webkit-appearance: none
+            +transition(0.3s)
+            font-weight: 600
+            &:focus
+                border-color: $green-deep
+                color: $green-deep
+                background-color: $green-light
+                &::placeholder
+                    color: $green-deep
+        .a_btn
+            width: 100%
+            margin-top: 0
+            border-radius: 0px 0px 12px 12px
+            border-top: 1px solid $green-deep
+            color: $green-deep
+            background-color: $green-light
+            &::before
+                content: ""
+                position: absolute
+                width: 24px
+                height: 24px
+                background-image: url(../img/icon-arrow-green.png)
+                background-size: 100%
+                background-repeat: no-repeat
+                left: 43%
+                top: 17px
+                +transform(translateX(-50%))
+                +transition(0.3s)
+            &:hover
+                color: $white
+                background-color: $green-deep
+                &::before 
+                    +filter(brightness(100))
+        .button_section
+            position: absolute
+            width: 100%
+            left: 0
+            bottom: 0
+            +transform(translateY(100%))
+// 
+.main_footer
+    margin: 120px 0 0 0
+    background-color: $green_main
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url(../img/footer_base.png)
+        width: 100%
+        height: 100%
+        background-position: left center
+        background-repeat: no-repeat
+        +filter(blur(10px))
+    .top
+        background-color: $green-light
+    .first_text
+        display: flex
+        align-items: center
+        gap: 20px
+        padding: 40px 0
+        position: relative
+        z-index: 1
+        span
+            display: block
+            color: $black-shade
+            font-size: 17px
+            font-weight: 600
+            line-height: 22px
+            font-family: $font_paragraph
+        h2
+            font-size: 40px
+            color: $green-deep
+    .social_media
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: center
+        gap: 20px
+        h3
+            font-size: 24px
+            font-weight: 600
+            font-family: $font_paragraph
+        ul
+            display: flex
+            align-items: center
+            gap: 15px
+            li
+                display: flex
+                align-items: center
+                gap: 5px
+            span
+                color: $green-deep
+                font-size: 15px
+                font-weight: 700
+                display: block
+            a
+                width: 40px
+                height: 40px
+                display: inline-block
+                background-color: $green-light
+                position: relative
+                border-radius: 100%
+                +transition(0.3s)
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    +transform(translate(-50% , -50%))
+                    +transition(0.3s)
+                &:hover
+                    background-color: $green-deep
+                    img
+                        +filter(brightness(100))
+    .row
+        &:first-child
+            align-items: center
+            .col-md-6
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 1px 
+                    height: 100px
+                    background-color: $green_main
+                    right: 0px
+                    top: 24px
+                &:last-child
+                    &::after
+                        display: none
+.options_section_footer
+    position: relative
+    z-index: 1
+    padding: 30px 0
+    .logo
+        margin-bottom: 10px
+    .services_links
+        float: right
+        ul
+            display: flex
+            align-items: baseline
+            flex-wrap: wrap
+            margin-top: 20px
+            li
+                flex: 0 0 49%
+                margin-bottom: 15px
+                &.active
+                    a
+                        color: $green-deep
+                        font-weight: 700
+            a
+                font-size: 15px
+                font-weight: 700
+                color: $black-shade
+                font-family: $font_heading
+                +transition(0.3s)
+                &:hover
+                    color: $green-deep
+    h3
+        color: $black-shade
+        font-size: 24px
+        font-weight: 600
+        line-height: 1
+    .support_links
+        float: right
+        ul
+            margin-top: 20px
+            li
+                margin-bottom: 15px
+                &.active
+                    a
+                        color: $green-deep
+                        font-weight: 700
+        a
+            font-size: 15px
+            font-weight: 700
+            color: $black-shade
+            font-family: $font_heading
+            +transition(0.3s)
+            &:hover
+                color: $green-deep
+    .extra_row
+        .col-md-4   
+            width: 30%
+        .col-md-8
+            width: 70%
+    .contact_info
+        ul
+            display: flex
+            align-items: center
+            gap: 10px
+            font-size: 15px
+            font-weight: 700
+            color: $green-deep
+            margin-top: 20px
+            li
+                display: flex
+                align-items: center
+                gap: 10px
+            span
+                background-color: $green-light
+                width: 40px
+                height: 40px
+                display: inline-block
+                position: relative
+                border-radius: 100%
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    +transform(translate(-50% , -50%))
+        a
+            color: $green-deep
+            font-weight: 700
+            &:hover
+                color: $black
+.bottom_part_footer
+    position: relative
+    z-index: 1
+    background-color: rgba(255, 255, 255, 0.30)
+    padding: 30px 0
+    .row
+        .col-md-6
+            &::after
+                display: none
+    .news_latter
+        display: flex
+        align-items: center
+        gap: 30px
+        .news_lattre_form
+            flex-shrink: 0
+            flex-grow: 1
+        h3
+            font-size: 24px
+            font-weight: 600
+            font-family: $font_paragraph
+        .form_group
+            position: relative
+        input
+            &:not(.news_latter_btn) 
+                width: 100%
+                height: 60px
+                background-color: $border-dash
+                border-radius: 48px
+                outline: 0
+                padding: 0 20px
+                border: 1px solid $bg-extra
+                -webkit-appearance: none
+                +transition(0.3s)
+                font-weight: 600
+            &::placeholder
+                font-size: 15px
+                font-weight: 700
+                color: $bg-extra
+                +transition(0.3s)
+        .news_latter_btn
+            width: 48px
+            height: 48px
+            background-image: url(../img/news_latter_btn.png)
+            position: absolute
+            outline: 0
+            border: 0
+            background-color: transparent
+            right: 6px
+            top: 6px
+            +transition(0.3s)
+            &:hover
+                +filter(brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(318%) hue-rotate(71deg) brightness(93%) contrast(90%))
+    .error_text
+        font-size: 15px
+        font-weight: 700
+        display: block
+        margin-top: 6px
+    .copyright
+        display: flex
+        align-items: center
+        justify-content: space-between
+        p
+            font-family: $font_heading
+            font-weight: 400
+            font-size: $black-shade
+            a
+                color: $green_main
+                &:hover
+                    color: $green-deep
+// Inner Banner
+.inner_banner_main
+    position: relative
+    height: 600px
+    width: 100%
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $green-light
+        opacity: 45%
+    .inner_banner_text
+        position: absolute
+        top: 60%
+        text-align: center
+        +transform(translate(-50% , -50%))
+        z-index: 1
+        width: 74%
+        margin: auto
+        left: 50%
+    h2
+        color: $green-deep
+        font-size: 64px
+    .a_btn
+        padding-left: 55px
+// 
+.therapists_listing_main
+    margin: 60px 0
+    .main_list
+        margin-top: 30px
+        .row
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+.therapists_listing_img
+    .fig_holder
+        width: 100%
+        height: 400px
+        figure
+            border-radius: 12px 12px 0px 0px
+    .text
+        background-color: $black
+        padding: 30px
+        border-radius: 0 0 12px 12px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        a
+            font-size: 24px
+            font-weight: 600
+            color: $white
+            &:hover
+                color: $green_main
+.therapists_listing_text
+    h6
+        margin-bottom: 10px
+    ul
+        margin-top: 20px
+        display: flex
+        align-items: center
+        gap: 10px
+        flex-wrap: wrap
+        span
+            color: $black-shade
+            font-size: 17px
+            font-weight: 600
+            font-family: $font_paragraph
+        li
+            font-size: 15px
+            font-weight: 600
+            font-family: $font_heading
+            display: flex
+            align-items: center
+            gap: 10px
+            color: $border-color
+.therapists_listing_img 
+    .text 
+        a
+            font-size: 20px
+// 
+.about_safeHelpp_main
+    margin: 60px 0
+    p
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    .mid_section
+        margin-top: 60px
+        .row
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+            &:nth-child(even)
+                flex-direction: row-reverse
+    .fig_holder
+        width: 100%
+        height: 300px
+        figure
+            border-radius: 12px
+    .a_btn
+        margin-top: 30px
+        float: right
+    .bottom
+        margin-top: 60px
+        ul
+            text-align: left
+            display: flex
+            align-items: baseline
+            flex-wrap: wrap
+            gap: 20px
+            justify-content: center
+            margin-top: 30px
+            color: $black-shade
+            li
+                position: relative
+                padding-left: 28px
+                font-weight: 600
+                font-size: 18px
+                font-family: $font_paragraph
+                flex: 0 0 19%
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 18px
+                    height: 14px
+                    background-image: url(../img/icon-right.png)
+                    background-repeat: no-repeat
+                    background-position: center
+                    left: 0
+                    top: 5px
+    .text-center
+        .a_btn
+            float: none
+    .extra_row
+        margin-top: 30px
+        text-align: left
+        .fig_holder
+            width: 100%
+            height: 300px
+            figure
+                border-radius: 12px
+    .services_mid
+        margin-top: 60px
+        margin-bottom: 30px
+        text-align: center
+// 
+.case_page_inner
+    .therapists_listing_img 
+        .fig_holder
+            height: 300px
+            figure
+                border-radius: 12px
+// 
+.why_choose_us_inner
+    ul
+        margin-top: 30px
+        span
+            display: block
+            font-size: 18px
+            font-weight: 600
+            font-family: $font_paragraph
+            margin-bottom: 15px
+        li
+            padding-left: 28px
+            position: relative
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &::after
+                content: ''
+                position: absolute
+                width: 18px
+                height: 14px
+                background-image: url(../img/icon-right.png)
+                top: 5px
+                left: 0
+    .yers_exprience
+        position: absolute
+        bottom: 100px
+        right: 0
+        z-index: 2
+        background-color: $green-deep
+        border-radius: 12px
+        padding: 10px
+        .wapper
+            padding: 10px   
+            background-color: $green_main
+            border-radius: 12px
+        span
+            display: block
+            font-family: $font_heading
+            color: $white
+            line-height: 1
+            font-size: 15px
+            font-weight: 900
+            &:first-child
+                font-size: 38px
+                font-weight: 700
+                font-family: $font_paragraph
+                margin-bottom: 8px
+// 
+.therapy_typ_inner
+    margin: 60px 0
+    .wapper
+        background-color: $border-dash
+        padding: 30px
+        border-radius: 12px
+.thearphy_profile_wapper
+    .fig_holder
+        width: 100%
+        height: 300px
+        figure
+            border-radius: 12px 12px 0 0
+    .text
+        background-color: $black-shade
+        padding: 20px 
+        border-radius: 0 0 12px 12px
+        text-align: center
+        a
+            color: $white
+            font-size: 24px
+            font-weight: 600
+            line-height: 1
+            font-family: $font_paragraph
+            &:hover
+                color: $green_main
+.thearphy_text_wapper
+    h4
+        font-size: 20px
+        font-weight: 800
+        font-family: $font_heading
+        line-height: 1
+        margin-top: 10px
+        margin-bottom: 20px
+        color: $green_main
+    ul
+        margin-top: 30px
+        display: flex
+        align-items: baseline
+        flex-wrap: wrap
+        strong
+            display: block
+            margin-bottom: 10px
+            line-height: 1
+        li
+            margin-bottom: 20px
+            flex-basis: 50%
+            flex-grow: 1
+            &:last-child
+                margin-bottom: 0
+// 
+.help_us_inner
+    margin: 60px 0
+.therapy_looking_for_inner
+    background-color: $green_main
+    padding: 30px
+    border-radius: 12px
+    margin-top: 20px
+    h2
+        color: $white
+        padding-bottom: 30px
+        border-bottom: 1px solid $green-deep
+    ul
+        a
+            background-color: $green-light
+            display: flex
+            align-items: center
+            padding: 30px
+            border-radius: 12px
+            color: $green-deep
+            font-size: 24px 
+            line-height: 1
+            font-family: $font_paragraph
+            font-weight: 600
+            gap: 20px
+            position: relative
+            +transition(0.3s)
+            span
+                font-size: 15px
+                font-weight: 600
+                color: $green_main
+                +transition(0.3s)
+                line-height: 1
+            &:hover
+                background-color: $green-deep
+                color: $green-light
+                span
+                    color: $white
+                &::after
+                    background-image: url(../img/icon-arrow-green_light.svg)
+            &::after
+                content: ""
+                position: absolute
+                width: 32px
+                height: 32px
+                background-image: url(../img/icon-arrow-green_deep.svg)
+                background-size: 100%
+                background-repeat: no-repeat
+                right: 30px
+                +transition(0.3s)
+        li
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+            .bottom_taxt
+                font-size: 15px
+                display: block
+                line-height: 1
+                color: $white
+                margin-top: 10px
+.thank_you_inner
+    background-color: $green_main
+    padding: 30px
+    border-radius: 12px
+    margin-top: 20px
+    h2
+        color: $white
+        padding-bottom: 30px
+        border-bottom: 1px solid $green-deep
+    .main_bg_wapper
+        background-color: $green-light
+        padding: 30px
+        border-radius: 12px
+    ul
+        li
+            font-size: 20px
+            font-weight: 600
+            font-family: $font_paragraph
+            color: $green-deep
+            margin-bottom: 20px
+            position: relative
+            padding-left: 28px
+            &::after
+                content: ""
+                position: absolute
+                width: 18px
+                height: 13px
+                background-repeat: no-repeat
+                left: 0
+                top: 9px
+                background-image: url(../img/icon-check_thankyou.png)
+            &:last-child
+                margin-bottom: 0
+    p
+        color: $green-deep
+        font-size: 20px
+        font-weight: 600
+        font-family: $font_paragraph
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+.page_button_for_transfer
+    display: flex
+    align-items: center
+    gap: 30px
+    justify-content: center
+    margin-top: 30px
+    .next
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-arrow-green_light.svg)
+        background-position: center
+        background-repeat: no-repeat
+        display: inline-block
+        +transition(0.3s)
+        flex-shrink: 0
+        background-size: 100%
+        &:hover
+            background-image: url(../img/icon-arrow-green_deep.svg)
+    .perv
+        width: 48px
+        height: 48px
+        background-image: url(../img/icon-arrow-green_light.svg)
+        background-position: center
+        background-repeat: no-repeat
+        display: inline-block
+        +transition(0.3s)
+        +transform(rotate(180deg))
+        flex-shrink: 0
+        background-size: 100%
+        &:hover
+            background-image: url(../img/icon-arrow-green_deep.svg)
+// 
+.fancy_popup_inner
+    border-radius: 12px
+    width: 830px
+    padding: 30px
+    .for_others_input
+        margin-top: 20px
+    .a_btn
+        padding: 10px 27px
+    label
+        font-size: 15px
+        font-weight: 700
+        font-family: $font_heading
+        color: $green_main
+        margin-bottom: 8px
+        +transition(0.3s)
+    input , select , textarea
+        &:not( input[type=checkbox] , input[type=radio] , .a_btn)
+            width: 100%
+            height: 60px
+            background-color: transparent
+            border: 1px solid $green_main
+            border-radius: 48px
+            outline: 0
+            padding: 20px
+            color: $black
+            font-size: 15px
+            font-weight: 700
+            +transition(0.3s)
+            &:focus
+                border-color: $green-deep
+                &+label
+                    color: $black-shade
+                &::placeholder
+                    color: $black
+            &::placeholder
+                font-size: 15px
+                font-weight: 700
+                color: $green_main
+                font-family: $font_heading
+    textarea
+        height: 80px
+    .heading
+        border-bottom: 1px solid $green-deep
+        margin-bottom: 40px
+        h2
+            padding-bottom: 30px
+            margin-bottom: 0
+    .form_wapper_main
+        h3
+            color: $green-deep
+            font-size: 24px
+            font-weight: 600
+            font-family: $font_paragraph
+    .for_right_arrow
+        position: relative
+        padding: 30px
+        background-color: $green-light
+        border-radius: 12px 12px 0 0
+        &::after
+            content: ""
+            position: absolute
+            width: 32px
+            height: 32px
+            background-image: url(../img/icon-arrow-green_deep.svg)
+            right: 30px
+            top: 30px
+            +transform(rotate(-90deg))
+    .buttom_part
+        background-color: $white
+        padding: 30px 0
+        padding-bottom: 0
+    .only_input
+        .form_group
+            margin-bottom: 20px
+        .for_checkbox
+            padding-left: 38px
+            padding-top: 0
+            font-size: 15px
+            font-weight: 600
+            color: $border-color
+            a
+                font-weight: 700
+                color: $green_main
+                &:hover
+                    color: $border-color
+            &::before
+                width: 24px
+                height: 24px
+                border-radius: 4px
+                border-width: 2px
+        .a_btn
+            margin-top: 0
+    .or
+        display: block
+        font-size: 24px
+        font-weight: 600
+        font-family: $font_paragraph
+        color: $black-shade
+        text-align: center
+        margin: 30px 0
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            width: 45%
+            height: 1px
+            background-color: $black
+            left: 0
+            top: 18px
+        &::before
+            content: ""
+            position: absolute
+            width: 45%
+            height: 1px
+            background-color: $black
+            right: 0
+            top: 18px
+    .social_media_login
+        text-align: center
+        ul
+            li
+                margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+            a
+                display: inline-block
+                background-color: $green-light
+                padding: 14px 20px
+                border-radius: 48px
+                color: $green-deep
+                font-size: 16px
+                font-weight: 700
+                +transition(0.3s)
+                min-width: 300px
+                &:hover
+                    background-color: $green-deep
+                    color: $white
+        span
+            color: $green_main
+            font-size: 14px
+            font-weight: 700
+            display: inline-block
+            margin-top: 30px
+            a
+                color: $green-deep
+                +transition(0.3s)
+                &:hover
+                    color: $green_main
+    .forgot_password
+        display: block
+        font-size: 14px
+        font-weight: 700
+        color: $green_main
+        text-align: right
+        +transition(0.3s)
+        margin-top: -10px
+        &:hover
+            color: $green-deep
+.main_inner_form_wapper
+    padding: 30px
+    background-color: $green-light
+    border-radius: 0 0 12px 12px
+    .col-md-12
+        &:last-child
+            .form_group
+                margin-bottom: 0
+    .form_group
+        position: relative
+        margin-bottom: 40px
+        display: flex
+        flex-direction: column-reverse
+    input[type=radio]
+        &:not(.a_btn)
+            width: 100%
+            height: 100%
+            position: absolute
+            opacity: 0
+            &:checked
+                &+label
+                    &::before
+                        border: 8px solid $green-deep
+    .for_radio
+        font-size: 18px
+        font-weight: 600
+        color: $black-shade
+        position: relative
+        padding-left: 50px
+        line-height: 22px
+        font-family: $font_paragraph
+        padding-top: 5px
+        &::before
+            content: ""
+            position: absolute
+            width: 32px
+            height: 32px
+            display: block
+            border: 3px solid $green-deep
+            +border-radius(100%)
+            left: 0
+            top: 0px
+    input[type=checkbox]
+        &:not(.a_btn)
+            width: 100%
+            height: 100%
+            position: absolute
+            opacity: 0
+            &:checked
+                &+label
+                    &::before
+                        background-color: $green-deep
+                        background-image: url(../img/icon-check-box.png)
+                        background-repeat: no-repeat
+                        background-position: center
+    .for_checkbox
+        font-size: 18px
+        font-weight: 600
+        color: $black-shade
+        position: relative
+        padding-left: 50px
+        line-height: 22px
+        font-family: $font_paragraph
+        padding-top: 5px
+        &::before
+            content: ""
+            position: absolute
+            width: 32px
+            height: 32px
+            display: block
+            border: 3px solid $green-deep
+            +border-radius(8px)
+            left: 0
+            top: 0px
+// 
+.otp_fancy
+    text-align: center
+    .for_right_arrow
+        &::after
+            display: none
+    .only_input
+        .row
+            justify-content: center
+        input
+            text-align: center
+
+
+
+
+
+
+
+                        

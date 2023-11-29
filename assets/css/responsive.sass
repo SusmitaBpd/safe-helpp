@@ -1,0 +1,140 @@
+=filter($filter_mode)
+    -webkit-filter: $filter_mode
+    -moz-filter: $filter_mode
+    -ms-filter: $filter_mode
+    -o-filter: $filter_mode
+    filter: $filter_mode
+
+=back-drop-filter($blur)
+    -webkit-backdrop-filter: $blur
+    -moz-backdrop-filter: $blur
+    -ms-backdrop-filter: $blur
+    -o-backdrop-filter: $blur
+    backdrop-filter: $blur
+
+=text-stroke-width($tstrokewidth)
+    -webkit-text-stroke-width: $tstrokewidth
+    -moz-text-stroke-width: $tstrokewidth
+    -ms-text-stroke-width: $tstrokewidth
+    -o-text-stroke-width: $tstrokewidth
+
+=text-stroke-color($tstrokecolor)
+    -webkit-text-stroke-color: $tstrokecolor
+    -moz-text-stroke-color: $tstrokecolor
+    -ms-text-stroke-color: $tstrokecolor 
+    -o-text-stroke-color: $tstrokecolor	
+
+=box-sizing($box)
+    -webkit-box-sizing: $box
+    -moz-box-sizing: $box
+    -ms-box-sizing: $box
+    -o-box-sizing: $box
+    webkit-box-sizing: $box
+
+=border-radius($round)
+    -webkit-border-radius: $round
+    -moz-border-radius: $round
+    -ms-border-radius: $round
+    border-radius: $round
+
+=transform($trans)
+    -webkit-transform: $trans
+    -moz-transform: $trans
+    -ms-transform: $trans
+    transform: $trans
+
+=transition($smooth)
+    -webkit-transition: $smooth
+    -moz-transition: $smooth
+    -o-transition: $smooth
+    transition: $smooth
+
+=appearance($appr)
+    -webkit-appearance: $appr
+    -moz-appearance: $appr
+    -o-appearance: $appr
+    appearance: $appr
+
+=box-shadow($bbs)
+    -webkit-box-shadow: $bbs
+    -moz-box-shadow: $bbs
+    -o-box-shadow: $bbs
+    box-shadow: $bbs
+
+=text-shadow($tbbs)
+    -webkit-text-shadow: $tbbs
+    -moz-text-shadow: $tbbs
+    -o-text-shadow: $tbbs
+    text-shadow: $tbbs
+
+@media screen and ( max-width: 1466px )
+    h2
+        font-size: 40px
+    .container  
+        max-width: 1150px
+    .main_nav 
+        .nav_list 
+            ul
+                gap: 30px
+                justify-content: end
+    .main_banner 
+        .banner_container
+            width: 1140px
+        .banner_img_wapper 
+            figure
+                width: 100%
+                height: 700px
+                background-size: 100%  100%
+                +transform(none)
+        .prev-btn , .next-btn
+            bottom: 155px
+    .wellcome_img_wapper_bottom 
+        .fig_holder
+            width: 502px
+    .wellcome_text_wapper_bottom 
+        ul 
+            li
+                font-size: 15px
+                flex: 0 0 46%
+    .services_offer_img 
+        .fig_holder
+            width: 235px
+        h3
+            a
+                font-size: 18px
+        .text
+            height: 250px
+    .advice_section 
+        h3
+            a
+                font-size: 18px
+    .Cases_img_slider 
+        .fig_holder
+            width: 322px
+    .main_footer 
+        .first_text 
+            h2
+                font-size: 24px
+        .social_media 
+            h3
+                font-size: 18px
+            ul 
+                span
+                    font-size: 12px
+        .row:first-child .col-md-6::after
+            height: 83px
+    .bottom_part_footer 
+        .copyright 
+            p
+                font-size: 12px
+    .options_section_footer 
+        .contact_info 
+            ul
+                gap: 5px
+                li
+                    font-size: 12px
+            a
+                font-size: 12px
+    .inner_banner_main 
+        h2
+            font-size: 50px
