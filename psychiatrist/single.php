@@ -97,15 +97,15 @@ $read_scheduled_time = mysqli_query($fetch_data,$sql_scheduled_time);
                             <p><?php echo $result_prof['about_therapist']; ?></p>
                             <ul>
                                 <li>
-                                    <strong>One of many Online Therapists Serving</strong>
+                                    <strong>One of many Online Psychiatrists Serving</strong>
                                     <?php echo $address; ?>
                                 </li>
                                 <li>
-                                    <strong>Type Of Therapy License(s)</strong>
+                                    <strong>Type Of Session License(s)</strong>
                                     <?php echo $result_prof['therapy_license']; ?>
                                 </li>
                                 <li>
-                                    <strong>Therapy Specialties</strong>
+                                    <strong>Session Specialties</strong>
                                     <?php echo $result_prof['therapist_specialty']; ?>
                                 </li>
                                 <li>
