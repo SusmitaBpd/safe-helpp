@@ -33,7 +33,7 @@ $read_all_data = mysqli_query($fetch_data,$sql);
 <section class="therapists_listing_main">
     <div class="container">
         <div class="top text-center">
-            <h6>Therapists</h6>
+            <h6>Psychiatrist</h6>
             <h2>Serving Clients in Washington, DC</h2>
             <p>Nullam eros felis, fringilla vitae facilisis blandit, finibus ac eros. In non ipsum iaculis, aliquet
                 sapien pretium, condimentum justo. Phasellus mollis metus et bibendum volutpat.
@@ -70,16 +70,16 @@ $read_all_data = mysqli_query($fetch_data,$sql);
                         <p><?= $result['about_therapist'] ; ?></p>
                         <ul>
                             <li>
-                                <span>One Of Many Online Therapists Serving</span>
+                                <span>One Of Many Online Psychiatrist Serving</span>
                                 <?php echo $result['therapist_address']; ?>
                                
                             </li>
                             <li>
-                                <span>Type Of Therapy License(s)</span>
+                                <span>Type Of Session License(s)</span>
                                 <?php echo $result['therapy_license']; ?>
                             </li>
                             <li>
-                                <span>Therapy Specialties</span>
+                                <span>Session Specialties</span>
                               <?php echo $result['therapist_specialty']; ?>
                             </li>
                             <li>

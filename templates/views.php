@@ -146,7 +146,7 @@
                     <div class="col-md-6">
                         <div class="wellcome_text_wapper_bottom">
                             <h6>Welcome to SafeHelpp</h6>
-                            <h2>Providing the Best Quality Psychological Therapies</h2>
+                            <h2>Providing the Best Quality Psychological Sessions</h2>
                             <p>Maecenas ultrices a tortor mollis tempor. Pellentesque sed interdum elit. Praesent mdiam,
                                 commodo at
                                 at ante id, dictum facilisis neque. Nulla congue a nulla vitae aliquam. Ut sollicitudin
