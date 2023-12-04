@@ -13,7 +13,7 @@ $table = 'therapist_scheduled_session';
 
 $fetch_data = $fetch_obj->read($table);
 
-$admin_id = "SH6544bcb0f20a6";
+$admin_id = "SH656d9a7cebc01";
 
 
 ?>
@@ -77,11 +77,12 @@ $admin_id = "SH6544bcb0f20a6";
 											<a href="#" data-id="<?php echo $row['id']; ?>" 
 											
 											class="btn btn-primary modal-edit btn-sm" id="edit-session-modal">Edit</a>
-											<a href="<?php echo $path_obj->adminpath("schedule"); ?>/action/remove-schedule.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Remove</a>
+
+											<a href="<?php echo $path_obj->adminpath("schedule"); ?>/action/remove-schedule.php?id=<?php echo $row['id']; ?>" class="remove_session btn btn-primary btn-sm">Remove</a>
 										<?php }elseif($id == $admin_id){ ?><a href="#" data-id="<?php echo $row['id']; ?>" 
 											
 											class="btn btn-primary modal-edit btn-sm" id="edit-session-modal">Edit</a>
-											<a href="<?php echo $path_obj->adminpath("schedule"); ?>/action/remove-schedule.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Remove</a><?php } ?>
+											<a href="<?php echo $path_obj->adminpath("schedule"); ?>/action/remove-schedule.php?id=<?php echo $row['id']; ?>" class="remove_session btn btn-primary btn-sm">Remove</a><?php } ?>
 										</td>
 									</tr>
 									<?php } ?>

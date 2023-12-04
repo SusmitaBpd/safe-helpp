@@ -1,10 +1,12 @@
 <?php require_once '../controller/class/classInclude.php'; 
  $path_obj = new Includepath();
 
-if(isset($_SESSION['therapist_id'])){ ?>
 
+$current_url = $_SERVER['REQUEST_URI'];
+$path_name = substr($current_url,12); 
+if( $path_name=='register/' || $path_name=='login/'){ ?>
 
-<footer class="footer">
+    <footer class="footer">
 				<div class="container-fluid">
 					<div class="row text-muted">
 						<div class="col-6 text-start">
@@ -31,7 +33,12 @@ if(isset($_SESSION['therapist_id'])){ ?>
 			</footer>
 		</div>
 	</div>
-<?php }?>
+ <?php }
+
+?>
+
+
+
 	<script src="<?php echo $path_obj->assetspath("js"); ?>/app.js"></script>
 	<!-- <script src="<?php echo $path_obj->assetspath("js"); ?>/cdnjs.cloudflare.com_ajax_libs_jquery_3.7.0_jquery.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -343,6 +350,7 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
 });
 </script>
 
+
 <script>
 	//edit schedule modal
 
@@ -478,6 +486,49 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
 
 </script>
 
+<script>
+  $(document).ready(function() {
+	$('.delete_data').bind('click', function(e) {
+	e.preventDefault();
+     
+      var userConfirmed = confirm('Are you sure that you want to permanently delete this record?');
+	  var urlscript = this.href;
+     
+      if (userConfirmed) {
+		location.href = urlscript;
+         
+        
+        alert("Proceeding with the action!");
+        
+      } else {
+        
+        alert("Action canceled by user.");
+      }
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+	$('.remove_session').bind('click', function(e) {
+	e.preventDefault();
+     
+      var userConfirmed = confirm('Are you sure you want to remove this record?');
+	  var urlscript = this.href;
+     
+      if (userConfirmed) {
+		location.href = urlscript;
+         
+        
+        alert("Proceeding with the action!");
+        
+      } else {
+        
+        alert("Action canceled by user.");
+      }
+    });
+  });
+</script>
 
 </body>
 

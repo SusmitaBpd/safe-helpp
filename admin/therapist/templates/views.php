@@ -11,9 +11,10 @@ $fetch_data = $fetch_obj->read($table);
 $username = $result['register_username'];
 $therapist_id = $result['therapist_id'];
 ?>
+
 <main class="content">
 				<div class="container-fluid p-0">
-
+		
 					<div class="mb-3">
 						<h1 class="h3 d-inline align-middle">Profiles</h1>
 					</div>
@@ -50,7 +51,7 @@ $therapist_id = $result['therapist_id'];
 
 										<td>
 											<a href="<?php echo $path_obj->adminpath("therapist/") ;?>single.php?id=<?php echo $result['therapist_id']; ?>" class="btn btn-primary btn-sm">View</a>
-											<a href="delete.php?id=<?php echo $result['therapist_id']; ?>" class="btn btn-primary btn-sm">Delete</a>
+											<a href="delete.php?id=<?php echo $result['therapist_id']; ?>"  data.id ="<?= $result['therapist_id'];  ?>" class=" delete_data btn btn-primary btn-sm">Delete</a>
 										</td>
 									</tr>
 									<?php } ?>
@@ -65,3 +66,4 @@ $therapist_id = $result['therapist_id'];
 
 				</div>
 			</main>
+

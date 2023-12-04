@@ -42,6 +42,9 @@ $address = $result_info['therapist_address'];
 ?>
 
 <main class="content">
+
+
+
 				<div class="container-fluid p-0">
 
 					

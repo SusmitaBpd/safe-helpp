@@ -73,13 +73,13 @@ $user_type = $result['user_type'];
 
 				<ul class="sidebar-nav">
 					
-					<?php if($user_type ==='admin'){ ?>
+					
 					<li class="sidebar-item">
 						<a class='sidebar-link' href='../therapist'>
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Therapist</span>
 						</a>
 					</li>
-					<?php } ?>
+					
 					<li class="sidebar-item">
 						<a class='sidebar-link' href='../profile'>
 							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
