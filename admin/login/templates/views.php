@@ -35,7 +35,9 @@
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" required />
+											<input class="form-control form-control-lg" type="password" id="pass" name="password" placeholder="Enter your password" required />
+											<i  id="closed" class="closed fa fa-eye fa-2x"></i>
+    										<i id="open" class="open fa fa-eye-slash fa-2x"></i>
 											<small>
 												<a href='pages-reset-password.html'>Forgot password?</a>
 											</small>
@@ -68,3 +70,5 @@
 			</div>
 		</div>
 	</main>
+	
+	

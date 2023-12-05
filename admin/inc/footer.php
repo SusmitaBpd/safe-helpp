@@ -259,7 +259,6 @@ var logoutTimer = setTimeout(function() {
 				
 				success:function(result){
 					
-			
 					var data = $.parseJSON(result)
 					if(data.status == 1){
 					
@@ -528,6 +527,45 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
       }
     });
   });
+</script>
+<script type="text/javascript">
+         $(document).ready(function(){
+
+             $("#open").click(function(){
+                 $("#open").hide();
+                 $("#closed").show();
+                 $("#pass").attr("type","text");
+				 
+             });
+
+             $("#closed").click(function(){
+                 $("#closed").hide();
+                 $("#open").show();
+                 $("#pass").attr("type","password");
+				 
+             });
+
+         });
+		 // confirm pass
+
+		$(document).ready(function(){
+
+		$("#open-confirm").click(function(){
+			$("#open-confirm").hide();
+			$("#closed-confirm").show();
+			$("#confirm-pass").attr("type","text");
+			
+		});
+
+		$("#closed-confirm").click(function(){
+			$("#closed-confirm").hide();
+			$("#open-confirm").show();
+			$("#confirm-pass").attr("type","password");
+			
+		});
+
+		});
+
 </script>
 
 </body>

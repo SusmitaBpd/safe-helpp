@@ -22,7 +22,27 @@ $user_id = $_SESSION['therapist_id'];}
 
 	<link class="js-stylesheet" href="<?php echo $path_obj->assetspath("css"); ?>/light.css" rel="stylesheet">
 	
-
+	<style>
+       
+	   .open
+	   {
+		   color: gray;
+		   font-size: 1.5em;
+	   }
+	   .closed
+	   {
+		   display: none;
+		   color: steelblue;
+		   font-size: 1.5em;
+	   }
+	   i
+	   {
+		   position: absolute;
+		   margin-top: -30px;
+		   margin-left: 370px;
+	   }
+	   
+   </style>
 	
 	<style>
 		body {

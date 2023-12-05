@@ -41,11 +41,15 @@
 										<div class="mb-3">
 											<label class="form-label">Password</label>
 											<input class="form-control form-control-lg" type="password" id="pass" name="password" placeholder="Enter password" required />
+											<i  id="closed" class="closed fa fa-eye fa-2x"></i>
+    										<i id="open" class="open fa fa-eye-slash fa-2x"></i>
 											<div id="passwordError"></div>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Confirm Password</label>
 											<input class="form-control form-control-lg" type="password" id="confirm-pass" name="comfirm_password" placeholder="Re-enter the password" required />
+											<i  id="closed-confirm" class="closed fa fa-eye fa-2x"></i>
+    										<i id="open-confirm" class="open fa fa-eye-slash fa-2x"></i>
 										</div>
 										<div id="CheckPasswordMatch"></div>
 										<br>

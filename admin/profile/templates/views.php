@@ -89,25 +89,25 @@ $address = $result_info['therapist_address'];
 										
 										<div class="mb-3">
 											<label class="form-label">Email address</label>
-											<input type="email" class="form-control" placeholder="Email" name="profile_email" value="<?php echo $result['register_email'] ;?>">
+											<input type="email" class="form-control" placeholder="Email" name="profile_email" value="<?php echo $result['register_email'] ;?>" required>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Phone Number</label>
-											<input type="tel" class="form-control" placeholder="Phone Number" name="profile_phone"  id="profile_phone"  value="<?php echo $phone ;?>">
+											<input type="tel" class="form-control" placeholder="Phone Number" name="profile_phone"  id="profile_phone"  value="<?php echo $phone ;?>" required>
 											<div id="phone-error"></div>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input type="password" class="form-control" placeholder="Password"  name="profile_pass" value="<?php echo $result['register_pass'] ;?>">
+											<input type="password" class="form-control" placeholder="Password"  name="profile_pass" value="<?php echo $result['register_pass'] ;?>" required>
 										</div>
 										
 										<div class="mb-3">
 											<label class="form-label">Profile Picture</label>
-											<input class="form-control" type="file" name="profile_pic" name="profile_pic" value="<?php echo $result_prof['profile_picture'] ; ?>">
+											<input class="form-control" type="file" name="profile_pic" name="profile_pic" value="<?php echo $result_prof['profile_picture'] ; ?>" >
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Designation</label>
-											<input class="form-control" type="text" name="profile_designation" value="<?php echo $result_prof['designation'] ; ?>">
+											<input class="form-control" type="text" name="profile_designation" value="<?php echo $result_prof['designation'] ; ?>" >
 										</div>
 										<div class="mb-3">
 											<label class="form-label">About</label>
