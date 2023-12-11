@@ -19,6 +19,10 @@ $email = $the_data['email'];
 $pass = $the_data['comfirm_password'];
 $date = date('Y-m-d H:i:s');
 
+$user_token = bin2hex(random_bytes(15));
+
+
+
 //Session data
 $_SESSION['therapist_id'] = $uniqueId ; 
 $_SESSION['email'] = $email ; 
@@ -31,6 +35,7 @@ $register_data = array(
     'register_username' => $username,
     'register_email' => $email,
     'register_pass'	=> $pass,
+    'user_token'   => $user_token,
     'date'          => $date
 );
 

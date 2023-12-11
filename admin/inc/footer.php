@@ -110,6 +110,8 @@ $('#register-form-data').on('submit', function(event){
         contentType:false,
         
         success:function(result){
+			alert(result);
+			return false;
 			
 			
 			var data = $.parseJSON(result)
@@ -565,6 +567,113 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
 		});
 
 		});
+
+</script>
+<script type="text/javascript">
+	$('#forget-pass-form-data').on('submit', function(event){
+    event.preventDefault();
+
+	var formData = new FormData()
+	var form = $('#forget-pass-form-data').serialize();
+
+	 formData.append('forget_pass_data', form)
+	
+	
+	
+
+	$.ajax({
+        url:'<?php echo $path_obj->adminpath("reset-password"); ?>/action/reset_pass-submit.php',
+		type:'post',
+        data:formData,
+        processData:false,
+        contentType:false,
+        
+        success:function(result){
+			var data = $.parseJSON(result)
+			if(data.status == 1){
+			$('#forget-pass-form-data')[0].reset();
+			$('#result_message').html("<p id='success'>"+data.message+"<p>").css("color","green");
+			
+			
+			// setTimeout(function () {
+			// $('#success').hide();
+			
+            //      }, 2500);
+
+			//
+		 }
+
+			else{
+
+				$('#forget-pass-form-data')[0].reset();
+				$('#result_message').html("<p id='error'>"+data.message+"<p>").css("color","red");
+				setTimeout(function () {
+			   $('#error').hide();
+                 }, 2500);
+				 
+				
+				
+				
+				
+			}
+		}
+
+	});
+
+	});
+
+</script>
+<script type="text/javascript">
+	$('#update-new-pass-form').on('submit', function(event){
+    event.preventDefault();
+
+	var formData = new FormData()
+	var form = $('#update-new-pass-form').serialize();
+
+	 formData.append('new_pass_data', form)
+	
+	
+	
+
+	$.ajax({
+        url:'<?php echo $path_obj->adminpath("reset-password"); ?>/action/update_new_pass.php',
+		type:'post',
+        data:formData,
+        processData:false,
+        contentType:false,
+        
+        success:function(result){
+			var data = $.parseJSON(result)
+			if(data.status == 1){
+			$('#update-new-pass-form')[0].reset();
+			$('#result_message').html("<p id='success'>"+data.message+"<p>").css("color","green");
+			
+			
+			setTimeout(function () {
+			$('#success').hide();
+			window.location = '<?php echo $path_obj->adminpath("login"); ?>'; 
+                 }, 2500);
+
+			}
+
+			else{
+
+				$('#update-new-pass-form')[0].reset();
+				$('#result_message').html("<p id='error'>"+data.message+"<p>").css("color","red");
+				setTimeout(function () {
+			   $('#error').hide();
+                 }, 2500);
+				 
+				
+				
+				
+				
+			}
+		}
+
+	});
+
+	});
 
 </script>
 

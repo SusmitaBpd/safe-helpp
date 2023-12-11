@@ -39,7 +39,7 @@
 											<i  id="closed" class="closed fa fa-eye fa-2x"></i>
     										<i id="open" class="open fa fa-eye-slash fa-2x"></i>
 											<small>
-												<a href='pages-reset-password.html'>Forgot password?</a>
+												<a href='../reset-password'>Forgot password?</a>
 											</small>
 										</div>
 										<div>
