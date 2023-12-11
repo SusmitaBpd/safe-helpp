@@ -15,9 +15,9 @@
 							<div class="card-body">
 								<div class="m-sm-3">
 									<div class="d-grid gap-2 mb-3">
-										<a class='btn btn-google btn-lg' href='index.html'><i class="fab fa-fw fa-google"></i> Sign in with Google</a>
-										<a class='btn btn-facebook btn-lg' href='index.html'><i class="fab fa-fw fa-facebook-f"></i> Sign in with Facebook</a>
-										<a class='btn btn-microsoft btn-lg' href='index.html'><i class="fab fa-fw fa-microsoft"></i> Sign in with Microsoft</a>
+										<a class='btn btn-google btn-lg' href='#'><i class="fab fa-fw fa-google"></i> Sign in with Google</a>
+										<a class='btn btn-facebook btn-lg' href='#'><i class="fab fa-fw fa-facebook-f"></i> Sign in with Facebook</a>
+										<a class='btn btn-microsoft btn-lg' href='#'><i class="fab fa-fw fa-microsoft"></i> Sign in with Microsoft</a>
 									</div>
 									<div class="row">
 										<div class="col">
@@ -31,7 +31,7 @@
 									<form id="login-form">
 										<div class="mb-3">
 											<label class="form-label">Email</label>
-											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required />
+											<input class="form-control form-control-lg" type="email" name="email"  placeholder="Enter your email" required />
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
@@ -44,8 +44,8 @@
 										</div>
 										<div>
 											<div class="form-check align-items-center">
-												<input id="customControlInline" type="checkbox" class="form-check-input" value="1" name="remember-me"
-													checked>
+												<input id="customControlInline" type="checkbox" class="form-check-input"  name="remember-me"
+													>
 												<label class="form-check-label text-small" for="customControlInline">Remember me</label>
 											</div>
 										</div>

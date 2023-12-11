@@ -10,8 +10,15 @@ $fetch_obj = new Crud();
     $login_data = array();
     parse_str($_POST['login_data'],$login_data);
 
+
+
     $email   = $login_data['email'];
     $password = $login_data['password'];
+
+    if(isset($login_data['remember-me'])){
+        setcookie('email_cookie',$email ,time()+86400);
+        setcookie('password_cookie',$password ,time()+86400);
+    }
 
     $table = 'therapist_register';
     $where_condition = array(
@@ -28,6 +35,9 @@ $fetch_obj = new Crud();
     
     
     if($email == $result['register_email'] &&  $password == $result['register_pass']){
+
+        
+
         $_SESSION['therapist_id']  = $result['therapist_id'];
 
         $response = array(

@@ -28,19 +28,25 @@ $user_id = $_SESSION['therapist_id'];}
 	   {
 		   color: gray;
 		   font-size: 1.5em;
+		   position: absolute;
+		   margin-top: -30px;
+		   margin-left: 370px;
 	   }
 	   .closed
 	   {
 		   display: none;
 		   color: steelblue;
 		   font-size: 1.5em;
-	   }
-	   i
-	   {
 		   position: absolute;
 		   margin-top: -30px;
 		   margin-left: 370px;
 	   }
+	   /* i
+	   {
+		   position: absolute;
+		   margin-top: -30px;
+		   margin-left: 370px;
+	   } */
 	   
    </style>
 	
