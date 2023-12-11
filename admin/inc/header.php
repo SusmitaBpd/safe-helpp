@@ -39,7 +39,7 @@ $user_id = $_SESSION['therapist_id'];}
 		   font-size: 1.5em;
 		   position: absolute;
 		   margin-top: -30px;
-		   margin-left: 370px;
+		   margin-left: 371px;
 	   }
 	   /* i
 	   {
