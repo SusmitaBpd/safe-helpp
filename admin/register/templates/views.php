@@ -15,9 +15,9 @@
 							<div class="card-body">
 								<div class="m-sm-3">
 									<div class="d-grid gap-2 mb-3">
-										<a class='btn btn-google btn-lg' href='index.html'><i class="fab fa-fw fa-google"></i> Sign up with Google</a>
-										<a class='btn btn-facebook btn-lg' href='index.html'><i class="fab fa-fw fa-facebook-f"></i> Sign up with Facebook</a>
-										<a class='btn btn-microsoft btn-lg' href='index.html'><i class="fab fa-fw fa-microsoft"></i> Sign up with Microsoft</a>
+										<a class='btn btn-google btn-lg' href='#'><i class="fab fa-fw fa-google"></i> Sign up with Google</a>
+										<a class='btn btn-facebook btn-lg' href='#'><i class="fab fa-fw fa-facebook-f"></i> Sign up with Facebook</a>
+										<a class='btn btn-microsoft btn-lg' href='#'><i class="fab fa-fw fa-microsoft"></i> Sign up with Microsoft</a>
 									</div>
 									<div class="row">
 										<div class="col">
