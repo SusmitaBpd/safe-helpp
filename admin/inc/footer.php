@@ -110,8 +110,7 @@ $('#register-form-data').on('submit', function(event){
         contentType:false,
         
         success:function(result){
-			alert(result);
-			return false;
+			
 			
 			
 			var data = $.parseJSON(result)

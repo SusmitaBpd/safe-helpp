@@ -1,7 +1,9 @@
 <?php
 session_start();
 
+
 $current_url = $_SERVER['REQUEST_URI'];
+
 $path_name = substr($current_url,12);
 
  if(str_contains($current_url, 'single.php') ||$path_name=='psychiatrist/' || $path_name=='register/' || $path_name=='login/'){
@@ -10,13 +12,14 @@ $path_name = substr($current_url,12);
     require_once '../controller/class/classDbcon.php';
  }
 
+ else{
  
  
- if($current_url=='/safe-helpp/'){
     require_once 'controller/class/classInclude.php'; 
     require_once 'controller/class/classDbcon.php';
     include_once "action/vendor/autoload.php";
  }
+ 
 //  if (str_contains($current_url, 'single.php')) {
 //     include_once "../action/vendor/autoload.php";
 //     require_once '../controller/class/classInclude.php'; 
@@ -132,6 +135,7 @@ $_SESSION['profile_picture']=$data['picture'];
                    
                     <li><a href="<?php echo $path_obj->adminpath("register/"); ?>" >Sign Up</a></li>
                     
+                    <!--  -->
                 </ul>
             </div>
         </div>
