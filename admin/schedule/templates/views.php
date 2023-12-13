@@ -3,17 +3,27 @@
 error_reporting(0);
 session_start();
 
+$admin_id = "SH656d9a7cebc01";
+$table = 'therapist_scheduled_session';
+
 $id = $_SESSION['therapist_id'];
-$where_condition = array('therapist_id' => $id );
+
+if($id == $admin_id){
+$fetch_data = $fetch_obj->read($table);
+
+
+}else{
+
 
 $fetch_obj = new Crud();
 $path_obj = new Includepath();
 
-$table = 'therapist_scheduled_session';
 
-$fetch_data = $fetch_obj->read($table);
+$where_condition = array('therapist_id' => $id );
 
-$admin_id = "SH656d9a7cebc01";
+$fetch_data = $fetch_obj->read_with_condition($table,$where_condition);
+
+}
 
 
 ?>
