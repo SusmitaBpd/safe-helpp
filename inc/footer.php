@@ -275,16 +275,17 @@ $('#user-login-form').on('submit', function(event){
         contentType:false,
         
         success:function(result){
+            
            
            
             var data = $.parseJSON(result)
     			if(data.status == 1){
     			    $('#booking_user_form')[0].reset();
-    			    $('#result_booking').html("<p id='success'>"+data.message+"<p>").css("color","green")
+    			    $('#result_booking').html("<p style='color: green;' id='success'>"+data.message+"<p>");
     				setTimeout(function () {
     			        $('#success').hide()
     			       // window.location = '../'
-                    }, 2000);
+                    }, 5000);
     			}else{
                 	$('#booking_user_form')[0].reset()
         			$('#result_booking').html("<p id='error'>"+data.message+"<p>").css("color","red")

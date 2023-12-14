@@ -94,6 +94,12 @@ $user_type = $result['user_type'];
 							
 						</a>
 					</li>
+					<li class="sidebar-item">
+						<a class='sidebar-link' href='../appointment'>
+							<i class="align-middle" data-feather="list"></i> <span class="align-middle">Appointment</span>
+							
+						</a>
+					</li>
 
 					
 
@@ -175,7 +181,7 @@ $user_type = $result['user_type'];
 							<a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
 								<img src="<?php echo $path_obj->adminpath("uploads/").$result_profile['profile_picture']; ?>" class="avatar img-fluid rounded" alt="Charles Hall" />
 							</a>
-							<div class="dropdown-menu dropdown-menu-end">
+							<!-- <div class="dropdown-menu dropdown-menu-end">
 								<a class='dropdown-item' href='pages-profile.html'><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
 								<div class="dropdown-divider"></div>
@@ -184,7 +190,7 @@ $user_type = $result['user_type'];
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">Log out</a>
-							</div>
+							</div> -->
 						</li>
 					</ul>
 				</div>

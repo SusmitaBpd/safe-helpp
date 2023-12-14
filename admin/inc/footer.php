@@ -360,6 +360,7 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
 		e.preventDefault();
 		var id    = $(this).data("id");
 		
+		
 		$('#myModal-edit-'+id).modal('show');
 		
 		$('.close, .modal-footer .btn-secondary').click(function() {
@@ -673,6 +674,86 @@ $('#myModal .close, #myModal .modal-footer .btn-secondary').click(function() {
 	});
 
 	});
+
+</script>
+<script>
+	$( document ).ready(function() {
+
+$('.modal-appointment').bind('click', function(e) {
+	e.preventDefault();
+	var id    = $(this).data("id");
+	
+	$('#appointment-approve-'+id).modal('show');
+	
+	$('.close, .modal-footer .btn-secondary').click(function() {
+	
+	
+	$('#appointment-approve-'+id).modal('hide');
+});
+
+
+	
+$('#appointment-edit-'+id).on('submit', function(event){
+    event.preventDefault();
+	
+	var formData = new FormData()
+	var form = $('#appointment-edit-'+id).serialize();
+	formData.append('appointment_data', form)
+	
+	
+	$.ajax({
+	url:'<?php echo $path_obj->adminpath("appointment"); ?>/action/appointment-edit.php',
+	type:'post',
+	data:formData,
+	processData:false,
+	contentType:false,
+	
+	success:function(result){
+		
+		var data = $.parseJSON(result)
+		
+		
+			if(data.status == 1){
+
+				$('#result_edit-'+id).html("<p id='success_edit'>"+data.message+"<p>").css("color","green");
+				
+				setTimeout(function () {
+				$('#appointment-edit-'+id)[0].reset();
+			   $('#success_edit').hide();
+			   
+			   window.location = '<?php echo $path_obj->adminpath("appointment"); ?>'; 
+                 }, 2500);
+				
+			
+			
+			}
+
+			else{
+				$('#result_edit-'+id).html("<p id='error_edit'>"+data.message+"<p>").css("color","red");
+			
+			
+					setTimeout(function () {
+					$('#appointment-edit-'+id)[0].reset();
+					$('#error_edit').hide();
+						}, 2500);
+
+
+				
+			    
+				 
+				
+				
+				
+				
+			}
+		
+	}
+	
+
+	});
+});
+});
+});
 
 </script>
 
