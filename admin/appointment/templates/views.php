@@ -1,5 +1,5 @@
 <?php 
-$user_id = 'SH655f322253b57';
+$user_id = $_SESSION['therapist_id'];
 $path_obj = new Includepath();
 
 $fetch_obj = new Crud();
@@ -10,7 +10,7 @@ $table = 'booked_appointment';
 
 $where_condition = array('psychiatrist_id' => $user_id );
 
-$fetch_data = $fetch_obj->read($table,$where_condition);
+$fetch_data = $fetch_obj->read_with_condition($table,$where_condition);
 
 
 
@@ -208,8 +208,10 @@ $therapist_id = $result['therapist_id'];
                 
             </div>
 			<div id="result_edit-<?php  echo $result['id'];  ?>" class="text-center"></div>	
+           
             <!-- Modal Footer -->
             <div class="modal-footer">
+                <span class="loader"></span>
                 <button type="button" class="btn btn-secondary btn-edit" data-dismiss="modal">Close</button>
                 <button type="submit" id="approve" name="submit" class=" btn btn-primary" >Approve </button>
             </div>

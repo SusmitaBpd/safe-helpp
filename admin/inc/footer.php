@@ -695,7 +695,7 @@ $('.modal-appointment').bind('click', function(e) {
 	
 $('#appointment-edit-'+id).on('submit', function(event){
     event.preventDefault();
-	
+	$('.loader').show();
 	var formData = new FormData()
 	var form = $('#appointment-edit-'+id).serialize();
 	formData.append('appointment_data', form)
@@ -716,6 +716,7 @@ $('#appointment-edit-'+id).on('submit', function(event){
 			if(data.status == 1){
 
 				$('#result_edit-'+id).html("<p id='success_edit'>"+data.message+"<p>").css("color","green");
+				$('.loader').hide();
 				
 				setTimeout(function () {
 				$('#appointment-edit-'+id)[0].reset();
