@@ -59,7 +59,7 @@ $user_id = $_SESSION['therapist_id'];}
     border: 5px solid;
     border-top-color: #495057;
 	position: absolute;
-	left: 20px;
+	left: 21px;
 }
     .loader::before {
       content: "";
